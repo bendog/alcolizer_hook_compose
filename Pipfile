@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+azure-servicebus = "==0.50.2"
+requests = "==2.2.1"
+
+[requires]
+python_version = "2.7"
+
+[dev-packages]
+autopep8 = "*"
+yapf = "*"
+rope = "*"

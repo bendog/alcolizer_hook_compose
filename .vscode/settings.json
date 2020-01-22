@@ -1,0 +1,9 @@
+{
+  "python.pythonPath": ".venv/bin/python2.7",
+  "python.formatting.provider": "yapf",
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "ALCOLIZER",
+    "alcoconnect"
+  ]
+}
