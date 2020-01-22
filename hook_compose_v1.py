@@ -26,7 +26,12 @@ def get_api_response(resource_name, resource_id):
     response = requests.request("GET", url, headers=headers)
 
     if response.status_code == 200:
-        return response.json()
+        # need to convert utf-8 to ascii for the output to work when printed.
+        # load the body with utf-8
+        body = response.content.decode('utf-8')
+        # return the body as ascii with xml references
+        return json.loads(body.encode("ascii", "xmlcharrefreplace"))
+        # return response.json()
 
     raise ValueError('response was not 200')
 
